@@ -13,11 +13,13 @@ module.exports = {
       lg: "976px",
       xl: "1440px",
     },
-    colors: {
-      danger: "#ff49db",
-      primary: "#222222",
-      light: "#ffffff",
-      dark: "#000000",
+    extend: {
+      colors: {
+        danger: "#ff49db",
+        primary: "#222222",
+        light: "#ffffff",
+        dark: "#000000",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
