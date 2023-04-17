@@ -9,7 +9,7 @@ export default function Header() {
             <a href="#">공지사항</a>
           </li>
           <li className="text-xs">
-            <Link href="/signin">로그인</Link>
+            <Link href="/signIn">로그인</Link>
           </li>
         </ul>
       </div>
