@@ -1,5 +1,9 @@
-This project is being created because the architecture has changed with the upgrade to Next.js 13.3 (BETA). <br /><br/>
-이 프로젝트는 Next.js가 13.3(BETA)로 바뀌면서 아키텍처가 변경되었기 때문에 만드는 프로젝트 입니다.
+This project is being created because the architecture has changed with the upgrade to Next.js 13.3 (BETA). <br />
+이 프로젝트는 Next.js가 13.3(BETA)로 새로운 아키텍처를 테스트하기 위해 만드는 프로젝트 입니다.
+<br /><br />
+This is a simple project using simple reusable UI components and Next-auth.
+<br />
+간단한 재사용이 가능한 UI 컴포넌트와 Next-auth를 사용한 간단한 프로젝트입니다.
 
 ## Getting Started
 
@@ -26,11 +30,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 │ ├── page.tsx
 │ ├── layout.tsx
 │ ├── globals.css
-│ │ ├── header.js
-│ │ ├── footer.js
 │ ├── signIn
+│ │ ├── page.tsx
+│ │ ├── layout.tsx
+│ │ ├── signIn.tsx
 ├── public
 ├── ui
+│ │ ├── header.tsx
+│ │ ├── footer.tsx
+│ │ ├── button.tsx
+│ │ ├── carousel.tsx
 ```
 
 - `app`: Source code for the project.
@@ -38,3 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - `layout.tsx`: This is a root layout that will apply to all routes inside app
 - `ui`: ui code for the project.
 - `README.md`: This file.
+
+### TODO
+
+- 로그인 연결

@@ -1,0 +1,115 @@
+"use client";
+
+import SnsButton from "@/ui/SnsButton";
+import Link from "next/link";
+import Button from "@/ui/Button";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+type SignInInputProps = {
+  email: string;
+  password: string;
+};
+
+export default function SignIn() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<SignInInputProps>();
+
+  console.log("watch", watch);
+
+  const onSubmit: SubmitHandler<SignInInputProps> = (data: any) => {
+    console.log(data);
+  };
+
+  return (
+    <main className="flex flex-col items-center">
+      <div className="w-96 pt-16 pb-40">
+        <div className="flex justify-center">
+          <h2 className="text-2xl pb-16">COMMERCE</h2>
+        </div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="block mb-2 text-sm font-medium text-primary"
+            >
+              이메일 주소
+            </label>
+            <input
+              type="email"
+              id="email"
+              {...register("email")}
+              aria-describedby="helper-text-explanation"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="예) email@commerce.com"
+            />
+            {errors.email && (
+              <p className="mt-1 text-xs text-green-600 dark:text-green-500">
+                <span className="font-medium">Well done!</span> Some success
+                message.
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label
+              htmlFor="password"
+              className="block mb-2 text-sm font-medium text-primary"
+            >
+              비밀번호
+            </label>
+            <input
+              type="password"
+              id="password"
+              {...register("password")}
+              aria-describedby="helper-text-explanation"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+            {errors.password && (
+              <p className="mt-1 text-xs text-red-600 dark:text-red-500">
+                <span className="font-medium">Oh, snapp!</span> Some error
+                message.
+              </p>
+            )}
+          </div>
+          <div className="pt-8 rounded-lg">
+            <Button type="primary" full textColor="light">
+              로그인
+            </Button>
+          </div>
+        </form>
+
+        <ul className="flex justify-between pt-8">
+          <li className="flex items-center justify-center w-full">
+            <Link className="text-xs" href="#">
+              이메일 가입
+            </Link>
+          </li>
+          <span className="text-neutral-400">l</span>
+          <li className="flex items-center justify-center w-full">
+            <Link className="text-xs" href="#">
+              이메일 찾기
+            </Link>
+          </li>
+          <span className="text-neutral-400">l</span>
+          <li className="flex items-center justify-center w-full">
+            <Link className="text-xs" href="#">
+              비밀번호 찾기
+            </Link>
+          </li>
+        </ul>
+
+        <div className="pt-8">
+          <SnsButton type="Google" />
+        </div>
+
+        <div className="pt-2">
+          <SnsButton type="Github" />
+        </div>
+      </div>
+    </main>
+  );
+}
