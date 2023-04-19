@@ -2,6 +2,7 @@
 
 import { useId } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { Icons, IconType } from "./Icon";
 
 const button = cva("button", {
   variants: {
@@ -51,10 +52,12 @@ const button = cva("button", {
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {}
+    VariantProps<typeof button> {
+  icon: IconType;
+}
 
 export default function Button(props: ButtonProps) {
-  const { className, intent, size, disabled, children, ...rest } = props;
+  const { className, intent, size, disabled, icon, children, ...rest } = props;
   const buttonId = useId();
 
   return (
@@ -64,6 +67,7 @@ export default function Button(props: ButtonProps) {
       disabled={disabled}
       {...rest}
     >
+      {icon && Icons[icon]}
       <span>{children}</span>
     </button>
   );
