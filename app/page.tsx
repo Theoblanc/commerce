@@ -1,5 +1,5 @@
-import Carousel from "@/ui/Carousel";
-import ShortCardList from "@/ui/ShortCardList";
+import Carousel from "@/components/Carousel";
+import ShortCardList from "@/components/ShortCardList";
 
 export default function Home() {
   return (

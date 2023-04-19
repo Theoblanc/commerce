@@ -7,7 +7,9 @@ This is a simple project using simple reusable UI components and Next-auth.
 
 ## Getting Started
 
-First, run the development server:
+First, setting the .env file <br/>
+
+Second, run the development server:
 
 ```bash
 npm install
@@ -50,4 +52,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### TODO
 
+- STACK 설명
 - 로그인 연결
+- 상품 리스트
+- 상품 디테일 페이지
+- env README 가이드
+- 배포
+- 테스트

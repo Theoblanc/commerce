@@ -1,9 +1,10 @@
 "use client";
 
-import SnsButton from "@/ui/SnsButton";
 import Link from "next/link";
-import Button from "@/ui/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { emailValidate, psaswordValidate } from "@/lib/validates";
+import Button from "@/components/Button";
+import SnsButton from "@/components/SnsButton";
 
 type SignInInputProps = {
   email: string;
@@ -14,11 +15,8 @@ export default function SignIn() {
   const {
     register,
     handleSubmit,
-    watch,
-    formState: { errors },
+    formState: { isValid, errors },
   } = useForm<SignInInputProps>();
-
-  console.log("watch", watch);
 
   const onSubmit: SubmitHandler<SignInInputProps> = (data: any) => {
     console.log(data);
@@ -41,15 +39,20 @@ export default function SignIn() {
             <input
               type="email"
               id="email"
-              {...register("email")}
+              {...register("email", {
+                required: true,
+                pattern: emailValidate,
+              })}
               aria-describedby="helper-text-explanation"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="예) email@commerce.com"
+              autoCapitalize="none"
+              autoComplete="email"
+              autoCorrect="off"
             />
             {errors.email && (
               <p className="mt-1 text-xs text-green-600 dark:text-green-500">
-                <span className="font-medium">Well done!</span> Some success
-                message.
+                <span className="font-medium">{errors?.email?.message}</span>
               </p>
             )}
           </div>
@@ -64,7 +67,10 @@ export default function SignIn() {
             <input
               type="password"
               id="password"
-              {...register("password")}
+              {...register("password", {
+                required: true,
+                pattern: psaswordValidate,
+              })}
               aria-describedby="helper-text-explanation"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
@@ -76,7 +82,11 @@ export default function SignIn() {
             )}
           </div>
           <div className="pt-8 rounded-lg">
-            <Button type="primary" full textColor="light">
+            <Button
+              intent={isValid ? "primary" : "disabled"}
+              size="full"
+              disabled={!isValid}
+            >
               로그인
             </Button>
           </div>
