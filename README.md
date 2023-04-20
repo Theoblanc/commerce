@@ -1,35 +1,98 @@
-This project is being created because the architecture has changed with the upgrade to Next.js 13.3 (BETA). <br />
-이 프로젝트는 Next.js가 13.3(BETA)로 새로운 아키텍처를 테스트하기 위해 만드는 프로젝트 입니다.
-<br /><br />
-This is a simple project using simple reusable UI components and Next-auth.
-<br />
-간단한 재사용이 가능한 UI 컴포넌트와 Next-auth를 사용한 간단한 프로젝트입니다.
+<div align="center">
+  <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
+      <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
+    </picture>
+  <h1>Commerce with Next.JS (beta)</h1>
+  <p>
+Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
+  </p>
 
-## Getting Started
+</div>
 
-First, setting the .env file <br/>
+<br/>
 
-Second, run the development server:
+<!-- Table of Contents -->
 
-```bash
-npm install
-# and
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 📔 Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [About the Project](#⭐️-about-the-project)
 
-## Stack
+  - [Screenshots](#📷-screenshots)
+  - [Tech Stack](#space_invader-tech-stack)
+  - [Environment Variables](#key-environment-variables)
+  - [File Structure](file-structures)
 
-- Typescript
-- Node.js
-- Next.js 13.3(beta)
+- [Getting Started](#toolbox-getting-started)
+  - [Prerequisites](#bangbang-prerequisites)
+  - [Installation](#gear-installation)
+  - [Run Locally](#running-run-locally)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [Contact](#handshake-contact)
 
-## File Structures
+<!-- About the Project -->
+
+## ⭐️ About the Project
+
+<!-- Screenshots -->
+
+### 📷 Screenshots
+
+<div align="center">
+  <a href="" target="_blank"><img  src='' alt='image'/></a>
+</div>
+
+### :space_invader: Tech Stack
+
+<ul>
+  <li><a href="https://#/">Typescript</a></li>
+  <li><a href="https://nextjs.org/">Next.js</a></li>
+  <li><a href="https://reactjs.org/">React.js</a></li>
+  <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+</ul>
+
+<table>
+    <tr>
+        <td>
+          <a href="#">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="" width="30" height="30" /></a>
+        </td>
+        <td>
+          <a href="#">
+            <img src="https://user-images.githubusercontent.com/99184393/183096870-fdf58e59-d78c-44f4-bd1c-f9033c16d907.png" alt="Google" width="30" height="30" /></a>
+        </td>
+        <td>
+          <a href="#">
+            <img src="https://user-images.githubusercontent.com/99184393/179383376-874f547c-4e6f-4826-850e-706b009e7e2b.png" alt="" width="30" height="30" /></a>
+        </td>
+        <td>
+          <a href="#">
+            <img src="https://user-images.githubusercontent.com/99184393/180462270-ea4a249c-627c-4479-9431-5c3fd25454c4.png" alt="" width="30" height="30" />
+          </a>
+        </td>
+        <td>
+          <a href="#">
+            <img src="https://user-images.githubusercontent.com/99184393/204170976-0e5c6e2a-2b41-483d-adbd-d5d1e40b8d15.png" alt="" width="30" height="30" />
+          </a>
+        </td>
+    </tr>
+</table>
+
+### :key: Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`NEXTAUTH_URL`
+
+`GOOGLE_CLIENT_ID`
+
+`NEXT_PUBLIC_SECRET`
+
+`GOOGLE_CLIENT_SECRET`
+
+`NEXT_PUBLIC_BASE_URL`
+
+### File Structures
 
 ```text
 ├── README.md
@@ -58,9 +121,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### TODO
 
-- STACK 설명
+- ReadMe 정리
+  - STACK 설명
+  - env README 가이드
+- 캐러셀 자동
 - 로그인 연결
 - 상품 디테일 페이지
-- env README 가이드
 - 배포
 - 테스트
