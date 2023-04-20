@@ -23,6 +23,12 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Stack
+
+- Typescript
+- Node.js
+- Next.js 13.3(beta)
+
 ## File Structures
 
 ```text
@@ -54,7 +60,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - STACK 설명
 - 로그인 연결
-- 상품 리스트
 - 상품 디테일 페이지
 - env README 가이드
 - 배포

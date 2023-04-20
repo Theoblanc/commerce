@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { emailValidate, psaswordValidate } from "@/lib/validates";
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
 
 type SignInInputProps = {
   email: string;
@@ -81,7 +81,12 @@ export default function SignIn() {
             )}
           </div>
           <div className="pt-8 rounded-lg">
-            <Button intent="primary" size="full" disabled={!isValid}>
+            <Button
+              intent={`${isValid ? "primary" : "disabled"}`}
+              size="full"
+              disabled={!isValid}
+              round="xl"
+            >
               로그인
             </Button>
           </div>
@@ -108,13 +113,13 @@ export default function SignIn() {
         </ul>
 
         <div className="pt-8">
-          <Button icon="google" size="full">
+          <Button icon="google" intent="secondary" size="full">
             Sign in with Google
           </Button>
         </div>
 
         <div className="pt-2">
-          <Button icon="github" size="full">
+          <Button icon="github" intent="secondary" size="full">
             Sign in with Github
           </Button>
         </div>
