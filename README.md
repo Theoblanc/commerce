@@ -16,12 +16,12 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
 
 ## 📔 Table of Contents
 
-- [About the Project](#⭐️-about-the-project)
+- [About the Project](#star2-about-the-project)
 
-  - [Screenshots](#📷-screenshots)
+  - [Screenshots](#camera-screenshots)
   - [Tech Stack](#space_invader-tech-stack)
   - [Environment Variables](#key-environment-variables)
-  - [File Structure](file-structures)
+  - [File Structure](#file_folder-file-structures)
 
 - [Getting Started](#toolbox-getting-started)
   - [Prerequisites](#bangbang-prerequisites)
@@ -32,11 +32,11 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
 
 <!-- About the Project -->
 
-## ⭐️ About the Project
+## :star2: About the Project
 
 <!-- Screenshots -->
 
-### 📷 Screenshots
+### :camera: Screenshots
 
 <div align="center">
   <a href="" target="_blank"><img  src='' alt='image'/></a>
@@ -95,7 +95,7 @@ To run this project, you will need to add the following environment variables to
 
 `DATABASE_URL_WITH_SCHEMA`
 
-### File Structures
+### :file_folder: File Structures
 
 ```text
 ├── README.md

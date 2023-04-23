@@ -1,8 +1,13 @@
 "use client";
 
+import getCurrentUser from "@/actions/getCurrentUser";
 import Link from "next/link";
 
-export default function Header() {
+export default async function Header() {
+  const currentUser = await getCurrentUser();
+
+  console.log("currentUser", currentUser);
+
   return (
     <div className="px-10">
       <div className="flex justify-end pt-2">
