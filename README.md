@@ -49,6 +49,7 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
   <li><a href="https://nextjs.org/">Next.js</a></li>
   <li><a href="https://reactjs.org/">React.js</a></li>
   <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+  <li><a href="https://next-auth.js.org/">Next-auth</a></li>
 </ul>
 
 <table>
@@ -84,13 +85,15 @@ To run this project, you will need to add the following environment variables to
 
 `NEXTAUTH_URL`
 
-`GOOGLE_CLIENT_ID`
+`NEXTAUTH_SECRET`
 
-`NEXT_PUBLIC_SECRET`
+`GOOGLE_ID`
 
-`GOOGLE_CLIENT_SECRET`
+`GITHUB_SECRET`
 
-`NEXT_PUBLIC_BASE_URL`
+`DATABASE_URL`
+
+`DATABASE_URL_WITH_SCHEMA`
 
 ### File Structures
 
@@ -122,14 +125,13 @@ To run this project, you will need to add the following environment variables to
 ### FEATRUE
 
 - Tailwind design
-- Credential authentication
 - Google authentication
 - Github authentication
+- Credential authentication
 
 ### TODO
 
 - ReadMe 정리
-  - STACK 설명
   - env README 가이드
 - 캐러셀 자동
 - 로그인 연결
