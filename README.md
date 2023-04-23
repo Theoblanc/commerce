@@ -119,6 +119,13 @@ To run this project, you will need to add the following environment variables to
 - `ui`: ui code for the project.
 - `README.md`: This file.
 
+### FEATRUE
+
+- Tailwind design
+- Credential authentication
+- Google authentication
+- Github authentication
+
 ### TODO
 
 - ReadMe 정리
