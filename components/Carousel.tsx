@@ -50,6 +50,7 @@ export default function Carousel() {
               width={1492}
               height={480}
               loading="eager"
+              priority
             />
           </div>
         ))}

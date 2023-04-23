@@ -1,33 +1,36 @@
 "use client";
 
-import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { emailValidate, psaswordValidate } from "@/lib/validates";
 import Button from "@/components/ui/Button";
-import { signIn } from "next-auth/react";
+import axios from "axios";
 
-type SignInInputProps = {
+type JoinInputProps = {
   email: string;
   password: string;
 };
 
-export default function SignIn() {
+export default function Join() {
   const {
     register,
     handleSubmit,
     formState: { isValid, errors },
-  } = useForm<SignInInputProps>();
+  } = useForm<JoinInputProps>();
 
-  const onSubmit: SubmitHandler<SignInInputProps> = (data: any) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<JoinInputProps> = (data: any) => {
+    axios
+      .post("../api/register", data)
+      .then(() => alert("성공"))
+      .catch((error) => console.log(error));
   };
 
   return (
     <main className="flex flex-col items-center">
       <div className="w-96 pt-16 pb-40">
         <div className="flex justify-center">
-          <h2 className="text-2xl pb-16">COMMERCE</h2>
+          <h2 className="text-2xl pb-16">회원가입</h2>
         </div>
+
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-6">
             <label
@@ -92,48 +95,6 @@ export default function SignIn() {
             </Button>
           </div>
         </form>
-
-        <ul className="flex justify-between pt-8">
-          <li className="flex items-center justify-center w-full">
-            <Link className="text-xs" href="/join">
-              이메일 가입
-            </Link>
-          </li>
-          <span className="text-neutral-400">l</span>
-          <li className="flex items-center justify-center w-full">
-            <Link className="text-xs" href="#">
-              이메일 찾기
-            </Link>
-          </li>
-          <span className="text-neutral-400">l</span>
-          <li className="flex items-center justify-center w-full">
-            <Link className="text-xs" href="#">
-              비밀번호 찾기
-            </Link>
-          </li>
-        </ul>
-
-        <div className="pt-8">
-          <Button
-            icon="google"
-            intent="secondary"
-            size="full"
-            onClick={() => signIn("google")}
-          >
-            Sign in with Google
-          </Button>
-        </div>
-
-        <div className="pt-2">
-          <Button
-            icon="github"
-            intent="secondary"
-            size="full"
-            onClick={() => signIn("github")}
-          >
-            Sign in with Github
-          </Button>
-        </div>
       </div>
     </main>
   );

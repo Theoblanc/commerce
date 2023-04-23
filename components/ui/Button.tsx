@@ -48,6 +48,12 @@ const button = cva("button", {
       xl: "rounded-xl",
       full: "rounded-full",
     },
+
+    variant: {
+      outline: ["border", "border-gray-900"],
+      text: [],
+      contained: [],
+    },
   },
   compoundVariants: [{ intent: "primary", size: "medium", class: "uppercase" }],
   defaultVariants: {

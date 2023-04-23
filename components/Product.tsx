@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Product() {
@@ -7,9 +9,10 @@ export default function Product() {
         <Image
           src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
           alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-          className="h-full w-full object-cover object-center group-hover:opacity-75"
+          className="h-auto w-full object-cover object-center group-hover:opacity-75"
           width={300}
           height={300}
+          priority
         />
       </div>
       <h3 className="mt-4 text-sm text-gray-700">Earthen Bottle</h3>

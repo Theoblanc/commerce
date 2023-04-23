@@ -10,15 +10,13 @@ interface ShortCardImgProps {
 function ShortCardImg(props: ShortCardImgProps) {
   const { url, alt } = props;
   return (
-    <div>
-      <Image
-        className="rounded-lg"
-        src={url}
-        width={250}
-        height={100}
-        alt={alt}
-      />
-    </div>
+    <Image
+      className="rounded-lg w-full h-auto"
+      src={url}
+      width={250}
+      height={100}
+      alt={alt}
+    />
   );
 }
 
