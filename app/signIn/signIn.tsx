@@ -118,7 +118,11 @@ export default function SignIn() {
             icon="google"
             intent="secondary"
             size="full"
-            onClick={() => signIn("google")}
+            onClick={() =>
+              signIn("google", {
+                callbackUrl: "/",
+              })
+            }
           >
             Sign in with Google
           </Button>

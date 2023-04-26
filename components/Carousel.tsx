@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const items = [
   {
@@ -27,6 +27,14 @@ export default function Carousel() {
   const onPrev = () => {
     setCurrentSlide((currentSlide - 1 + items.length) % items.length);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prevIndex) => (prevIndex + 1) % items.length);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div

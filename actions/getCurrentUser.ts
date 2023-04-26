@@ -6,16 +6,25 @@ export async function getSession() {
   return await getServerSession(authOptions);
 }
 
+function exclude<User, Key extends keyof User>(
+  user: User,
+  keys: Key[]
+): Omit<User, Key> {
+  for (let key of keys) {
+    delete user[key];
+  }
+  return user;
+}
+
 export default async function getCurrentUser() {
   try {
     const session = await getSession();
-    console.log(session);
 
     if (!session?.user?.email) {
       return null;
     }
 
-    const currentUser = await prisma.user.findUnique({
+    const currentUser = await prisma?.user.findUnique({
       where: {
         email: session.user.email as string,
       },
@@ -25,9 +34,9 @@ export default async function getCurrentUser() {
       return null;
     }
 
-    return {
-      ...currentUser,
-    };
+    const userWithoutPassword = exclude(currentUser, ["password"]);
+
+    return { ...userWithoutPassword };
   } catch (error: any) {
     return null;
   }
