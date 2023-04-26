@@ -49,18 +49,24 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
   <li><a href="https://nextjs.org/">Next.js</a></li>
   <li><a href="https://reactjs.org/">React.js</a></li>
   <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
+  <li><a href="https://nodejs.org/en">Node.js</a></li>
   <li><a href="https://next-auth.js.org/">Next-auth</a></li>
+  <li><a href=https://www.mongodb.com/">MongoDB</a></li>
 </ul>
 
 <table>
     <tr>
         <td>
           <a href="#">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="" width="30" height="30" /></a>
+            <img src="https://user-images.githubusercontent.com/99184393/183096870-fdf58e59-d78c-44f4-bd1c-f9033c16d907.png" alt="Google" width="30" height="30" /></a>
         </td>
         <td>
           <a href="#">
-            <img src="https://user-images.githubusercontent.com/99184393/183096870-fdf58e59-d78c-44f4-bd1c-f9033c16d907.png" alt="Google" width="30" height="30" /></a>
+            <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" alt="" width="30" height="30" /></a>
+        </td>
+        <td>
+          <a href="#">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="" width="30" height="30" /></a>
         </td>
         <td>
           <a href="#">
@@ -76,7 +82,13 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
             <img src="https://user-images.githubusercontent.com/99184393/204170976-0e5c6e2a-2b41-483d-adbd-d5d1e40b8d15.png" alt="" width="30" height="30" />
           </a>
         </td>
+        <td>
+          <a href="#">
+            <img src="./public/icons/icons8-mongodb-48.png" />
+          </a>
+        </td>
     </tr>
+
 </table>
 
 ### :key: Environment Variables
@@ -131,8 +143,6 @@ To run this project, you will need to add the following environment variables to
 
 ### TODO
 
-- ReadMe 정리
-  - env README 가이드
 - 캐러셀 자동
 - 로그인 연결
 - 상품 디테일 페이지
