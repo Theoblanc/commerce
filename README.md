@@ -145,8 +145,6 @@ To run this project, you will need to add the following environment variables to
 
 ### TODO
 
-- 캐러셀 자동
-- 로그인 연결
 - 상품 디테일 페이지
 - 배포
 - 테스트
