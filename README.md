@@ -40,7 +40,7 @@ Commerce with Next.JS! (Next.js, NextAuth.js v4.22.0, Tailwind CSS)
 
 <div align="center">
   <a href="https://github.com/Theoblanc/commerce" target="_blank">
-    <img width="80%" src='https://user-images.githubusercontent.com/45908750/234578280-23d6aa26-afe6-46cf-9c69-e66835660f42.mov' alt='image'/>
+    <img width="80%" src='https://user-images.githubusercontent.com/45908750/234580269-e5c99da4-baf3-464d-9867-a699e99ea861.gif' alt='image'/>
     </a>
 </div>
 
